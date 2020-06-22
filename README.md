@@ -28,7 +28,7 @@ Your app must:
 <!-- To do
 1. create overview of Project -->
 <!-- 2. create wireframe of design -->
-3. create user stories based on Specifications
+<!-- 3. create user stories based on Specifications -->
 4. create components based on user Stories
 5. test and iterate
 6. add in bonus features
