@@ -1,33 +1,90 @@
+*{
+  
+}
+
 body {
   background-color: f4f4f4;
   font-family: 'Open Sans', sans-serif;
-  display: flex;
-  flex-direction: column;
-
 }
 
 container {
   max-width:  1280px;
   max-height: 720px;
+  border: solid #444444 1px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  overflow: none;
+  display: flex;
+  flex-direction: column;
 }
 
 #nav {
   background-color: #D8D8D8;
-
+  display: flex;
+  justify-content: space-between;
 }
 
-#secondarynav {
-  background-color: #D8D8D8;
-
-}
-
-.user-icon {
+#user-icon {
   background-color: #444444;
   height: 100px;
   width: 100px;
 }
 
+#user-name {
+  padding: 16px;
+}
+
+#rename {
+  padding: 16px;
+}
+
+#age {
+  padding: 16px;
+}
+
+#secondarynav {
+  background-color: #D8D8D8;
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.status {
+  display: flex;
+  align-items: center;
+
+}
+
+#game {
+  height: 400px;
+  display: flex;
+  justify-content:center;
+}
+
+
 #footer {
+  background-color: #D8D8D8;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+#feed {
+  background-color: #D8D8D8;
+
+}
+
+
+#lights {
+  background-color: #D8D8D8;
+
+}
+
+
+#play {
   background-color: #D8D8D8;
 
 }

@@ -29,9 +29,9 @@ Your app must:
 1. create overview of Project -->
 <!-- 2. create wireframe of design -->
 <!-- 3. create user stories based on Specifications -->
-4. create components based on user Stories
-5. test and iterate
-6. add in bonus features
+<!-- 4. create components based on user Stories -->
+<!-- 5. test and iterate
+6. add in bonus features -->
 <!-- * **Wireframe:** - Basically draw out what your game will look like—very different way it could look. You can use paper or any wireframe tool you find online. -->
 
 * **User Stories** - Wording should center around how a user interacts with your game, for example:
@@ -86,7 +86,7 @@ Your app must:
 * **[jQuery Docs](http://api.jquery.com)** _(if you're using jQuery)_
 * **[Github Pages](https://pages.github.com)** _(for hosting your game)_
 
----
+
 
 <!-- ### Project Feedback + Evaluation
 
