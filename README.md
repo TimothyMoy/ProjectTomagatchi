@@ -16,7 +16,13 @@ Everyone will get a chance to **be creative**, and work through some really **to
 
 ---
 ### Wireframe
-![Wireframe](/Images/Tomagotchi_Wireframe.png)
+![UserFlow](/Images/User_Flow.png)
+![Start](/Images/Wireframe_TomagotchiStart.png)
+![CharacterSelect](/Images/Wireframe_TomagotchiCharacterSelect.png)
+![CharacterEdit](/Images/Wireframe_TomagotchiCharacterEdit.png)
+![Game](/Images/Wireframe_TomagotchiGame.png)
+![GameWin](/Images/Wireframe_TomagotchiGameWin.png)
+![GameLose](/Images/Wireframe_TomagotchiGameLose.png)
 
 ### Technical Requirements
 
@@ -34,30 +40,45 @@ Your app must:
 6. add in bonus features -->
 <!-- * **Wireframe:** - Basically draw out what your game will look like—very different way it could look. You can use paper or any wireframe tool you find online. -->
 
-* **User Stories** - Wording should center around how a user interacts with your game, for example:
+* **User Stories**
 1.  The user begins the game by click/tapping start
-    * Create a Class (JS Class, look at your notes if your forget) for your tomagotchi
+    <!-- * Player starts at initial loading screen -->
+    <!-- * initial screen should have title of game & start button-->
+    <!-- * Create start button in center of container -->
+    <!-- * Create title above the start button -->
 2.  The user can then select a character
-    * The character starts at age 1
-    * The character starts with a default random name
-    * Add the ability to name your pet.
+    <!-- * Create a modal for character selection -->
+    <!-- * Create a user icon for character -->
+    <!-- * Create a Class (JS Class, look at your notes if your forget) for your tomagotchi -->
+    <!-- * When user select character, they see user icon, player name, player age, and next button -->
+    <!-- * The character starts at age 1 -->
+    <!-- * The character starts with a default random name -->
+    <!-- * Add the ability to name your pet. -->
+    <!-- * Next takes you to main Game. -->
 3.  The level begins with the selected character
-    * Display the following metrics for your pet:
+    <!-- * Create Header that display the following metrics for your pet:
+      * Name
+      * User Icon
+      * Age
       * Hunger (1-10 scale)
       * Sleepiness (1-10 scale)
-      * Boredom (1-10 scale)
+      * Boredom (1-10 scale) -->
+    <!-- * Next takes you to main Game. -->
 4.  The user can see their character in the center UI
-    * Animate your pet across the screen while it's alive.
+    <!-- * Animate your pet across the screen while it's alive. -->
 5.  The user can the interact with their pet by feeding, turning off lights, and playing.
-    * Add buttons to the screen to feed your pet, turn off the lights, and play with your pet.
-    * Increase your pet's Hunger, Sleepiness, and Bored metrics on an interval of your choosing.
-5.  The user's pet ages every x minutes
-    * Increase your pet's age every x minutes
+    <!-- * Add buttons to the screen to feed your pet, turn off the lights, and play with your pet.
+    * Increase your pet's Hunger, Sleepiness, and Bored metrics on an interval of your choosing. -->
+    <!-- * Feed subtracts 1 from hunger scale. -->
+    <!-- * lights subtracts 1 Sleepiness scale. -->
+    <!-- * play subtracts 1 Boredom scale. -->
+5.  The user's pet ages every 2 minutes
+    <!-- * Increase your pet's age every 2 minutes -->
 6.  The pet will age ever 5 years.
-    * Morph your pet at certain ages.
+    <!-- * Morph your pet at certain ages. -->
 6.  If the pets age or status's hit 10, the game is over.
-    * You pet should die if Hunger, Boredom, or Sleepiness hits 10.
-
+    <!-- * You lose if your pet should die if Hunger, Boredom, or Sleepiness hits 10. -->
+    <!-- * You win if age 10. -->
 
 
 * **Render a game in the browser**
