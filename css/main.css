@@ -30,7 +30,7 @@ container {
   position: relative;
 }
 /*----Game Start---- */
-.startGame {
+.startScreen {
 background-color: var(--wBackground);
 top: 0;
 height: 100%;
@@ -44,8 +44,12 @@ transition: transform .6s ease-in-out;
 z-index: 2;
 }
 
+.startButton {
+
+}
+
 /*----Game modal---- */
-.CharacterModal {
+.characterModal {
 background-color: var(--wBackground);
 top: 0;
 height: 100%;
@@ -57,6 +61,11 @@ display: flex;
 flex-direction: column;
 transition: transform .6s ease-in-out;
 z-index: 1;
+}
+
+
+.startButton {
+
 }
 /*----Game---- */
 
@@ -82,7 +91,9 @@ z-index: 1;
 }
 
 #age {
-
+display: flex;
+align-items: center;
+padding-right: 8px;
 }
 
 #secondarynav {
