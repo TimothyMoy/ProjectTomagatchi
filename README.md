@@ -1,34 +1,67 @@
-# Project-0-Game
-First SEI Project
+# Project-Tomagotchi
+
 
 ### Overview
 
-Let's start out with something fun—**a game!**
+For the first SEI Project, I am building a -**Tomagtochi Game !**
+
+ **what the project is and why you made it,
+
+<!-- Let's start out with something fun—**a game!**
 
 Everyone will get a chance to **be creative**, and work through some really **tough programming challenges** – since you've already gotten your feet wet with a few small apps, it's up to you to come up with a fun and interesting game to build.
 
-**You will be working individually for this project**, but we'll be guiding you along the process and helping as you go. Show us what you've got!
+**You will be working individually for this project**, but we'll be guiding you along the process and helping as you go. Show us what you've got! -->
 
 
 ---
+### Wireframe
+![Wireframe](/images/Tomagotchi_Wireframe.png)
 
 ### Technical Requirements
 
 Your app must:
-* **HAVE ITS OWN REPO, under your github account. NOT A FORK.**
+<!-- * **HAVE ITS OWN REPO, under your github account. NOT A FORK.** -->
 * **Git 20+ commits** Commit early, commit often. Tell a story with your commits. Each message should give a clear idea what you changed.
-* **Include Wireframes and User Stories in the README**
-* **Wireframe:** - Basically draw out what your game will look like—very different way it could look. You can use paper or any wireframe tool you find online.
+<!-- * **Include Wireframes and User Stories in the README** -->
+
+<!-- To do
+1. create overview of Project -->
+<!-- 2. create wireframe of design -->
+3. create user stories based on Specifications
+4. create components based on user Stories
+5. test and iterate
+6. add in bonus features
+<!-- * **Wireframe:** - Basically draw out what your game will look like—very different way it could look. You can use paper or any wireframe tool you find online. -->
+
 * **User Stories** - Wording should center around how a user interacts with your game, for example:
     1.  The user click starts and the level starts
     2.  When the user hits the ```f key``` a fire ball is catuplulated at a target.
+    3.  Create a Class (JS Class, look at your notes if your forget) for your tomagotchi
+    * Instatiate(create) your Tomagotchi
+    * Display a character of your choice on the screen to represent your pet
+    * Display the following metrics for your pet:
+     * Hunger (1-10 scale)
+     * Sleepiness (1-10 scale)
+     * Boredom (1-10 scale)
+     * Age
+    * Add buttons to the screen to feed your pet, turn off the lights, and play with your pet.
+    * Add the ability to name your pet.
+    * Style the page.
+    * Increase your pet's age every x minutes
+    * Increase your pet's Hunger, Sleepiness, and Bored metrics on an interval of your choosing.
+    * You pet should die if Hunger, Boredom, or Sleepiness hits 10.
+    * Morph your pet at certain ages.
+    * Animate your pet across the screen while it's alive.
+
+
 * **Render a game in the browser**
-* **Include separate HTML / CSS / JavaScript files**
-* Stick with **KISS (Keep It Simple Stupid)** and **DRY (Don't Repeat Yourself)** principles
-* Use **JavaScript or jQuery** for **DOM manipulation**
+<!-- * **Include separate HTML / CSS / JavaScript files** -->
+<!-- * Stick with **KISS (Keep It Simple Stupid)** and **DRY (Don't Repeat Yourself)** principles -->
+<!-- * Use **JavaScript or jQuery** for **DOM manipulation** -->
 * **Deploy your game online**, where the rest of the world can access it (we will show you how)
-* Use **semantic markup** for HTML and CSS (adhere to best practices)
-* Be reasonably complex
+<!-- * Use **semantic markup** for HTML and CSS (adhere to best practices) -->
+<!-- * Be reasonably complex -->
 
 ---
 
@@ -88,10 +121,10 @@ This will serve as a helpful overall gauge of whether you met the project goals,
 
 ### Specifications
 
-* Create a repo for your tomagotchi pet
-* make a commit after you finish each one of the following
+<!-- * Create a repo for your tomagotchi pet -->
+<!-- * make a commit after you finish each one of the following -->
 * Create a Class (JS Class, look at your notes if your forget) for your tomagotchi
-* Instatiate your Tomagotchi
+* Instatiate(create) your Tomagotchi
 * Display a character of your choice on the screen to represent your pet
 * Display the following metrics for your pet:
  * Hunger (1-10 scale)
