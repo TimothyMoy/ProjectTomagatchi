@@ -16,7 +16,7 @@ Everyone will get a chance to **be creative**, and work through some really **to
 
 ---
 ### Wireframe
-![Wireframe](/images/Tomagotchi_Wireframe.png)
+![Wireframe](/Images/Tomagotchi_Wireframe.png)
 
 ### Technical Requirements
 
@@ -35,24 +35,29 @@ Your app must:
 <!-- * **Wireframe:** - Basically draw out what your game will look like—very different way it could look. You can use paper or any wireframe tool you find online. -->
 
 * **User Stories** - Wording should center around how a user interacts with your game, for example:
-    1.  The user click starts and the level starts
-    2.  When the user hits the ```f key``` a fire ball is catuplulated at a target.
-    3.  Create a Class (JS Class, look at your notes if your forget) for your tomagotchi
-    * Instatiate(create) your Tomagotchi
-    * Display a character of your choice on the screen to represent your pet
-    * Display the following metrics for your pet:
-     * Hunger (1-10 scale)
-     * Sleepiness (1-10 scale)
-     * Boredom (1-10 scale)
-     * Age
-    * Add buttons to the screen to feed your pet, turn off the lights, and play with your pet.
+1.  The user begins the game by click/tapping start
+    * Create a Class (JS Class, look at your notes if your forget) for your tomagotchi
+2.  The user can then select a character
+    * The character starts at age 1
+    * The character starts with a default random name
     * Add the ability to name your pet.
-    * Style the page.
-    * Increase your pet's age every x minutes
-    * Increase your pet's Hunger, Sleepiness, and Bored metrics on an interval of your choosing.
-    * You pet should die if Hunger, Boredom, or Sleepiness hits 10.
-    * Morph your pet at certain ages.
+3.  The level begins with the selected character
+    * Display the following metrics for your pet:
+      * Hunger (1-10 scale)
+      * Sleepiness (1-10 scale)
+      * Boredom (1-10 scale)
+4.  The user can see their character in the center UI
     * Animate your pet across the screen while it's alive.
+5.  The user can the interact with their pet by feeding, turning off lights, and playing.
+    * Add buttons to the screen to feed your pet, turn off the lights, and play with your pet.
+    * Increase your pet's Hunger, Sleepiness, and Bored metrics on an interval of your choosing.
+5.  The user's pet ages every x minutes
+    * Increase your pet's age every x minutes
+6.  The pet will age ever 5 years.
+    * Morph your pet at certain ages.
+6.  If the pets age or status's hit 10, the game is over.
+    * You pet should die if Hunger, Boredom, or Sleepiness hits 10.
+
 
 
 * **Render a game in the browser**
@@ -83,7 +88,7 @@ Your app must:
 
 ---
 
-### Project Feedback + Evaluation
+<!-- ### Project Feedback + Evaluation
 
 * __Project Workflow__: Did you complete the user stories, wireframes, task tracking, and/or ERDs, as specified above? Did you use source control as expected for the phase of the program you’re in (detailed above)?
 
@@ -108,8 +113,8 @@ This will serve as a helpful overall gauge of whether you met the project goals,
 
 ---
 
-### Suggested Ways to Get Started
-
+### Suggested Ways to Get Started -->
+<!--
 * **Break the project down into different components** (data, presentation, views, style, DOM manipulation) and brainstorm each component individually. Use whiteboards!
 * **Use your Development Tools** (console.log, element inspector, alert statements, etc) to debug and solve problems
 * During the day, work through problems in class & **ask questions when you need to!** We're here to help prevent you from burning through your time with wild goose chases. Add relevant code to your game each night too, instead of, you know... _procrastinating_.
@@ -123,7 +128,7 @@ This will serve as a helpful overall gauge of whether you met the project goals,
 
 <!-- * Create a repo for your tomagotchi pet -->
 <!-- * make a commit after you finish each one of the following -->
-* Create a Class (JS Class, look at your notes if your forget) for your tomagotchi
+<!-- * Create a Class (JS Class, look at your notes if your forget) for your tomagotchi
 * Instatiate(create) your Tomagotchi
 * Display a character of your choice on the screen to represent your pet
 * Display the following metrics for your pet:
@@ -144,4 +149,4 @@ This will serve as a helpful overall gauge of whether you met the project goals,
 * Have your tomagotchi give birth to baby tomagotchi...
 * ...with special powers (extend the class)!
 * Add an `excercise()` method to your tomagotchi, that affects certain properties
-* Add anything you can think of... use your imagination!
+* Add anything you can think of... use your imagination! --> -->
