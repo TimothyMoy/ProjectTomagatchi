@@ -41,6 +41,21 @@ font-size: 1.6em;
 display: flex;
 flex-direction: column;
 transition: transform .6s ease-in-out;
+z-index: 2;
+}
+
+/*----Game modal---- */
+.CharacterModal {
+background-color: var(--wBackground);
+top: 0;
+height: 100%;
+width: 100%;
+position: absolute;
+text-align: center;
+font-size: 1.6em;
+display: flex;
+flex-direction: column;
+transition: transform .6s ease-in-out;
 z-index: 1;
 }
 /*----Game---- */
