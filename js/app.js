@@ -29,6 +29,7 @@ class Pet {
 let age = 0;
 const statusBar = 10;
 const pets = [];
+const status = ["Hunger","Sleepiness","Boredom"];
 
 //event listeners
 //Start game button takes you to next screen
@@ -50,12 +51,16 @@ $('.characterButton').click(function(){
   //creates pets
   generatePets();
   //Starts status counter
-  // createSquares(squareCount);
+  generateStats();
 })
 
-
+// $('#feed').click(function(){
+//   $('.startScreen').css("display","none");
+//   $('.characterButton').prop("disabled", true);
+// })
 
 //functions
+
 //Starts Age
 function startAge(){
   const ages = setInterval(function() {
@@ -72,19 +77,10 @@ function startAge(){
 }
   function updateAge(){
     //updates UI
-    //need to figure out how to not have UI shift up.
     document.getElementById('age').innerText = `Age ${age}`;
   }
 
 //pet
-// function generatePets(){
-//   for(i = 0; i < 1; i++){
-//     const newPet = new Pet("dog");
-//     pets.push(newPet);
-//   }
-//   return pets
-// }
-
 function generatePets(){
   const newPet = new Pet("dog");
   $('<div id="dog"></div>').appendTo('#game');
@@ -100,4 +96,21 @@ function generatePets(){
     duration: 4000,
     iterations: Infinity
     });
+}
+
+//status
+function generateStats(){
+  console.log('this works');
+  for (let i = 0; i < status.length; i ++){
+    console.log(status[i]);
+    if (status[i] === "Hunger") {
+      createScale()
+    }
+  }
+}
+
+function createScale(){
+  for (let j = 0; j < 10; j++) {
+      $('.status').append($("<div class='scale'></div>"));
+  }
 }

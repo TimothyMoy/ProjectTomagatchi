@@ -121,10 +121,22 @@ padding-right: 8px;
 
 }
 
+.scale{
+  background-color: var(--xBackground);
+  height: 10px;
+  width: 10px;
+  margin-left: 1px;
+}
+
+.text{
+  margin-right: 8px;
+}
+
 #game {
   height: 190px;
   display: flex;
   justify-content:center;
+  align-items: center;
 }
 
 
@@ -157,7 +169,7 @@ padding-right: 8px;
 /*----Game Characters---- */
 
 #dog{
-  background-color: #324232;
+  background-color: var(--xBackground);
   height: 100px;
   width: 100px;
 }
