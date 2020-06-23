@@ -93,7 +93,7 @@ Your app must:
 
 ### Necessary Deliverables
 
-* A working MVP (minium viable product) what is the absolute bare minimum functionality for you game, do not make it more complex until you've completed your MVP.
+<!-- * A working MVP (minium viable product) what is the absolute bare minimum functionality for you game, do not make it more complex until you've completed your MVP. -->
 * A **working game, built by you**, hosted somewhere on the internet
 * A **link to your hosted working game** in the URL section of your Github repo
 * A **git repository hosted on Github**, with a link to your hosted game, and frequent commits dating back to the very beginning of the project.
@@ -147,7 +147,7 @@ This will serve as a helpful overall gauge of whether you met the project goals,
 
 ### Specifications
 
-<!-- * Create a repo for your tomagotchi pet -->
+
 <!-- * make a commit after you finish each one of the following -->
 <!-- * Create a Class (JS Class, look at your notes if your forget) for your tomagotchi
 * Instatiate(create) your Tomagotchi

@@ -2,6 +2,7 @@
   --base-font:'Open Sans', sans-serif;
   --background: #f4f4f4;
   --wBackground: #D8D8D8;
+  --xBackground: #666666;
 }
 
 body {
@@ -29,6 +30,8 @@ container {
   align-items: center;
   position: relative;
 }
+
+
 /*----Game Start---- */
 .startScreen {
 background-color: var(--wBackground);
@@ -40,12 +43,14 @@ text-align: center;
 font-size: 1.6em;
 display: flex;
 flex-direction: column;
-transition: transform .6s ease-in-out;
 z-index: 2;
 }
-
+.Title {
+  height:300px;
+}
 .startButton {
-
+  padding: 16px;
+  margin: 16px;
 }
 
 /*----Game modal---- */
@@ -59,13 +64,19 @@ text-align: center;
 font-size: 1.6em;
 display: flex;
 flex-direction: column;
-transition: transform .6s ease-in-out;
 z-index: 1;
 }
 
+.pet {
+  height: 100px;
+  width: 100px;
+  background-color: var(--xBackground);
+  margin:16px;
+}
 
-.startButton {
-
+.characterButton {
+  padding: 16px;
+  margin: 16px;
 }
 /*----Game---- */
 
@@ -141,4 +152,12 @@ padding-right: 8px;
 #play {
   background-color: var(--wBackground);
 
+}
+
+/*----Game Characters---- */
+
+#dog{
+  background-color: #324232;
+  height: 100px;
+  width: 100px;
 }
