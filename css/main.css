@@ -31,6 +31,12 @@ container {
   position: relative;
 }
 
+ul {
+  display:flex;
+  list-style: none;
+  padding: 0px;
+}
+
 
 /*----Game Start---- */
 .startScreen {
@@ -115,7 +121,19 @@ padding-right: 8px;
 }
 
 
-.status {
+.boredom {
+  display: flex;
+  align-items: center;
+
+}
+
+.sleepiness {
+  display: flex;
+  align-items: center;
+
+}
+
+.hunger {
   display: flex;
   align-items: center;
 
