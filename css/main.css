@@ -37,6 +37,10 @@ ul {
   padding: 0px;
 }
 
+label {
+  font-size: 16px;
+}
+
 
 /*----Game Start---- */
 .startScreen {
@@ -78,6 +82,7 @@ z-index: 1;
   width: 100px;
   background-color: var(--xBackground);
   margin:16px;
+  align-self: center;
 }
 
 .characterButton {

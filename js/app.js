@@ -27,6 +27,7 @@ class Pet {
 
 // 2) constants
 let age = 0;
+
 const statusBar = 10;
 const pets = [];
 const status = document.getElementsByClassName('text');
@@ -42,10 +43,13 @@ $('.startButton').click(function(){
   $('.characterButton').prop("disabled", true);
 })
 
-$('.pet').click(function(){
+$('.pet').one("click", function(){
   $('.pet').css("border","solid red 1px");
   $('.characterButton').prop("disabled", false);
+  createForm();
+  updateAge();
 })
+
 
 //Chracter select button starts the game
 $('.characterButton').click(function(){
@@ -57,6 +61,7 @@ $('.characterButton').click(function(){
   //creates stat bar
   generateStats();
   //starts stat counter
+
   // startHunger();
 })
 
@@ -69,6 +74,20 @@ $('#feed').click(function(){
 })
 
 //functions
+
+//name change on start
+function createForm() {
+$('<form><label>Name: </label><input type="text" value="tomagotchi"></form>').insertAfter($('.pet'));
+}
+
+//updates name
+function updateAge(){
+  //updates UI
+  $("form").submit(function(event){
+    console.log('this works');
+  })
+}
+
 
 //Starts Age
 function startAge(){
@@ -117,10 +136,11 @@ function generatePets(){
   document.getElementById('dog').innerText = `This is a ${newPet.type}`;
   document.getElementById('dog').animate([
     //keyframes
-    // { transform: 'translateY(0px)'},
+    { transform: 'translateY(0px)'},
     { transform: 'translateX(200px)'},
+      { transform: 'translateY(0px)'},
     { transform: 'translateX(-200px)'},
-    { transform: 'translateX(200px)'},
+      { transform: 'translateY(0px)'},
   ],{
     //timing options
     duration: 4000,
