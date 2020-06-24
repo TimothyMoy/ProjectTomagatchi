@@ -14,7 +14,6 @@
 // 5) or 6) event listeners
 // 5) or 6) functions
 
-
 class Pet {
   constructor(type,name,hunger,sleep,play,age) {
     this.type = type;
@@ -27,14 +26,12 @@ class Pet {
 
 // 2) constants
 let age = 0;
-
+// let rename = document.getElementById('user-name');
 const statusBar = 10;
 const pets = [];
 const status = document.getElementsByClassName('text');
-// let hunger = document.getElementsByClassName('scale');
-const sleepiness = [0,1,2,3,4,5,6,7,8,9]
-const boredom = [0,1,2,3,4,5,6,7,8,9]
-
+let hunger = document.getElementsByClassName('scale');
+const statArr = [0,1,2,3,4,5,6,7,8,9]
 
 //event listeners
 //Start game button takes you to next screen
@@ -43,15 +40,15 @@ $('.startButton').click(function(){
   $('.characterButton').prop("disabled", true);
 })
 
+//Character Selection
 $('.pet').one("click", function(){
   $('.pet').css("border","solid red 1px");
   $('.characterButton').prop("disabled", false);
   createForm();
-  updateAge();
 })
 
 
-//Chracter select button starts the game
+//Chracter button starts the game
 $('.characterButton').click(function(){
   $('.characterModal').css("display","none");
   //Starts Age counter
@@ -60,16 +57,18 @@ $('.characterButton').click(function(){
   generatePets();
   //creates stat bar
   generateStats();
-  //starts stat counter
-
-  // startHunger();
+  //setName
+  setName();
 })
 
+//Feed button test
 $('#feed').click(function(){
+
+  document.querySelector(".hungerStatus li .scale").innerHTML = "Clicked Index " + $(this).index();
 
   $('.hungerStatus li .scale').eq(0).css("background-color","red");
 
-    $('.hungerStatus li .scale').eq(10).css("background-color","red");
+    $('.hungerStatus li .scale').eq(2).css("background-color","red");
   console.log('this works');
 })
 
@@ -77,17 +76,17 @@ $('#feed').click(function(){
 
 //name change on start
 function createForm() {
-$('<form><label>Name: </label><input type="text" value="tomagotchi"></form>').insertAfter($('.pet'));
+$('<form><label>Name: </label><input type="text" id="form" value="tomagotchi"></form>').insertAfter($('.pet'));
+}
+//setName
+function setName(){
+  document.getElementById('user-name').innerText = document.getElementById('form').value;
 }
 
-//updates name
-function updateAge(){
-  //updates UI
-  $("form").submit(function(event){
-    console.log('this works');
-  })
-}
-
+//rename
+// function reName(){
+//   document.getElementById('user-name').innerText = document.getElementById('form').value;
+// }
 
 //Starts Age
 function startAge(){
@@ -99,6 +98,8 @@ function startAge(){
     } else {
       //need to create event to end game.
       //clearInterval ends loop
+      // $('#endGame').css("display","flex")
+      // $('#endGame').append('<p>')
       clearInterval(ages);
     }
   }, 1000)
@@ -107,26 +108,6 @@ function startAge(){
     //updates UI
     document.getElementById('age').innerText = `Age ${age}`;
   }
-
-  // //Starts status
-  // function startHunger(){
-  //   const newHunger = setInterval(function() {
-  //     //Age less then 10 then counts up
-  //     if (hunger < 10){
-  //       hunger++;
-  //       updatehunger()
-  //     } else {
-  //       //need to create event to end game.
-  //       //clearInterval ends loop
-  //       clearInterval(hunger);
-  //     }
-  //   }, 1000)
-  // }
-  //   function updatehunger(){
-  //     //updates UI
-  //   $('.status ul li .scale').eq(0).css("background-color","red");
-  //   console.log('thisworks');
-  //   }
 
 
 //pet
@@ -166,7 +147,7 @@ function generateStats(){
 }
 
 function createScale(){
-  for (let j = 0; j < 10; j++) {
+  for (let j = 0; j < statArr.length; j++) {
       $('ul').append($("<li><div class='scale'></div></li>"));
   }
 }
