@@ -1,14 +1,17 @@
 :root {
-  --base-font:'Open Sans', sans-serif;
+  --base-font:'Open Sans','Play', sans-serif;
+
   --background: #f4f4f4;
   --wBackground: #D8D8D8;
   --xBackground: #666666;
+  --mainButtonColor: #9F8AED;
+  --mainButtonBorder: #6652B2;
 }
 
 body {
   min-height: 100vh; /*visual height percent*/
   background-color: var(--background);
-  font-family: var(--base-font);
+  font-family: "play";
   font-size: 16px;
   padding: 0;
   margin: 0;
@@ -22,7 +25,7 @@ container {
   width: 100%;
   max-width: 640px;
   max-height: 340px;
-  border: solid #444444 1px;
+  border: solid #E5995F 5px;
   background-color: #f4f4f4;
   border-radius: 8px;
   overflow: hidden;
@@ -41,14 +44,23 @@ label {
   font-size: 16px;
 }
 
+form {
+  margin-bottom: 20px;
+}
+
 
 /*----Game Start---- */
 .startScreen {
 background-color: var(--wBackground);
+background-image: url('../Images/gamebackground.jpg');
+background-size: cover;
+background-position-y: center;
 top: 0;
 height: 100%;
 width: 100%;
 position: absolute;
+justify-content: center;
+align-items: center;
 text-align: center;
 font-size: 1.6em;
 display: flex;
@@ -57,22 +69,39 @@ z-index: 2;
 }
 
 .Title {
-  height:300px;
+  height:80px;
+  font-family: 'play';
+  color:#ffffff;
+  text-shadow: 0px 3px 8px rgba(0, 0, 0, 0.5);
+
 }
 .startButton {
-  padding: 16px;
-  margin: 16px;
+  font-family: "Play";
+  font-size: .8em;
+  background-color: var(--mainButtonColor);
+  color:#ffffff;
+  width: 160px;
+  height: 40px;
+  border-radius: 8px;
+  border-bottom-color: var(--mainButtonBorder);
+  border-top: none;
+  border-left: none;
+  border-right: none;
 }
 
 /*----Game modal---- */
 .characterModal {
 background-color: var(--wBackground);
+background-image: url('../Images/selectscreen.jpg');
+background-size: cover;
 top: 0;
 height: 100%;
 width: 100%;
 position: absolute;
 text-align: center;
-font-size: 1.6em;
+justify-content: center;
+align-items: center;
+font-size: 1.2em;
 display: flex;
 flex-direction: column;
 z-index: 1;
@@ -82,20 +111,65 @@ z-index: 1;
   height: 100px;
   width: 100px;
   background-color: var(--xBackground);
+  background-image: url('../Images/DogProfile.png');
+  background-size: contain;
   margin:16px;
   align-self: center;
+  border-radius: 8px;
 }
 
 .characterButton {
-  padding: 16px;
-  margin: 16px;
+  font-family: "Play";
+  font-size: .8em;
+  background-color: var(--mainButtonColor);
+  color:#ffffff;
+  width: 160px;
+  height: 40px;
+  border-radius: 8px;
+  border-bottom-color: var(--mainButtonBorder);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.characterButton:disabled {
+  font-family: "Play";
+  font-size: .8em;
+  background-color: var(--mainButtonBorder);
+  opacity: 50%;
+  color:#ffffff;
+  width: 160px;
+  height: 40px;
+  border-radius: 8px;
+
+}
+
+.label{
+  font-family: "Play";
+  padding: 0px 24px 0px 24px;
+  margin: 10px;
+  background-color: #FFEFC8;
+  border-radius: 8px;
+  border: solid;
+  border-bottom-color: #DEC790;
+  border-top: none;
+  border-left: none;
+  border-right: none;
 }
 
 #form{
 
 }
-
 /*----Game modal---- */
+#cover{
+background-color: rgba(0, 0, 0, 0.5);
+height: 100%;
+width: 100%;
+position:absolute;
+top: 0;
+display: none;
+}
+
 #endGame {
 background-color: #888888;
 border-radius: 16px;
@@ -106,7 +180,6 @@ width: 80%;
 position: absolute;
 text-align: center;
 font-size: 1.6em;
-display: none;
 flex-direction: column;
 z-index: 1;
 }
@@ -115,7 +188,7 @@ z-index: 1;
 /*----Game---- */
 
 #nav {
-  background-color: var(--Wbackground);
+  background-color: #FFEFC8;
   max-height: 50px;
   display: flex;
   justify-content: space-between;
@@ -123,13 +196,21 @@ z-index: 1;
 
 #user-icon {
   background-color: #444444;
-  height: 50px;
-  width: 50px;
+  background-image: url('../Images/DogProfile.png');
+  background-size: contain;
+  height: 36px;
+  width: 36px;
+  border-radius: 4px;
+  margin: 4px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+  align-self: center;
 }
 
 #user-name {
   display: flex;
   align-items: center;
+  margin-left: 16px;
+  margin-right: 16px;
 }
 
 #rename {
@@ -137,8 +218,9 @@ z-index: 1;
 }
 
 #age {
-display: flex;
-align-items: center;
+flex-grow: 12;
+line-height: 3;
+text-align: right;
 padding-right: 8px;
 }
 
@@ -184,6 +266,8 @@ padding-right: 8px;
   display: flex;
   justify-content:center;
   align-items: center;
+  background-image: url('../Images/gamebackgroundlong.jpg');
+  background-size: contain;
 }
 
 
@@ -197,20 +281,44 @@ padding-right: 8px;
 
 
 #feed {
-  background-color: var(--wBackground);
-
+  font-family: "Play";
+  background-color: var(--mainButtonColor);
+  color:#ffffff;
+  width: 80px;
+  height: 32px;
+  border-radius: 8px;
+  border-bottom-color: var(--mainButtonBorder);
+  border-top: none;
+  border-left: none;
+  border-right: none;
 }
 
 
 #lights {
-  background-color: var(--wBackground);
-
+  font-family: "Play";
+  background-color: var(--mainButtonColor);
+  color:#ffffff;
+  width: 80px;
+  height: 32px;
+  border-radius: 8px;
+  border-bottom-color: var(--mainButtonBorder);
+  border-top: none;
+  border-left: none;
+  border-right: none;
 }
 
 
 #play {
-  background-color: var(--wBackground);
-
+  font-family: "Play";
+  background-color: var(--mainButtonColor);
+  color:#ffffff;
+  width: 80px;
+  height: 32px;
+  border-radius: 8px;
+  border-bottom-color: var(--mainButtonBorder);
+  border-top: none;
+  border-left: none;
+  border-right: none;
 }
 
 .test1 {

@@ -44,7 +44,7 @@ $('.startButton').click(function(){
 
 //Character Selection
 $('.pet').one("click", function(){
-  $('.pet').css("border","solid red 1px");
+  $('.pet').css("box-shadow","0px 2px 2px rgba(0, 0, 0, 0.5)");
   $('.characterButton').prop("disabled", false);
   createForm();
 })
@@ -209,7 +209,6 @@ function hungerTimer() {
 setInterval(function (){
   if (hungerIndex < 10){
     let hungerNum = document.getElementById(`hunger${hungerIndex}`)
-      // console.log(divNum);
       hungerNum.classList.remove('test1');
       hungerNum.classList.add('test2');
       hungerIndex+=1;
@@ -223,7 +222,6 @@ function boredTimer() {
 setInterval(function (){
   if (boredIndex < 10){
     let boredNum = document.getElementById(`bored${boredIndex}`)
-      // console.log(divNum);
       boredNum.classList.remove('test1');
       boredNum.classList.add('test2');
       boredIndex+=1;
@@ -237,7 +235,6 @@ function sleepTimer() {
 setInterval(function (){
   if (sleepIndex < 10){
     let sleepNum = document.getElementById(`sleep${sleepIndex}`)
-      // console.log(divNum);
       sleepNum.classList.remove('test1');
       sleepNum.classList.add('test2');
       sleepIndex+=1;
