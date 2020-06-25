@@ -225,7 +225,7 @@ padding-right: 8px;
 }
 
 #secondarynav {
-  background-color: var(--wBackground);
+  background-color: #eadcb9;
   height: 50px;
   display: flex;
   justify-content: space-around;
@@ -272,7 +272,7 @@ padding-right: 8px;
 
 
 #footer {
-  background-color: var(--wBackground);
+  background-color: #ffefc8;
   height: 50px;
   display: flex;
   justify-content: space-around;
@@ -336,8 +336,135 @@ padding-right: 8px;
 
 /*----Game Characters---- */
 
-#dog{
-  background-color: var(--xBackground);
-  height: 100px;
-  width: 100px;
+#pet{
+position: absolute;
+top: 200px;
+}
+
+.dog{
+  background-color: #fdb44e;
+  height: 35px;
+  width: 60px;
+  position: absolute;
+  top:2%;
+  left:0;
+  border-radius: 0px 0px 0px 120px;
+}
+
+.body{
+  background-color: #fdb44e;
+  height: 40px;
+  width: 110px;
+  position: relative;
+  top:25px;
+  left:30px;
+  border-radius: 0px 0px 0px 60px;
+}
+
+.leg1,.leg2,.leg3,.leg4{
+  background-color: #fdb44e;
+  height: 30px;
+  width: 18px;
+  position: relative;
+  border-radius: 0px 0px 10px 0px;
+}
+
+.leg1{
+  top:8px;
+  left:50px;
+  background-color: rgba(191,131,37);
+  z-index: -1;
+  animation: walk1 1s infinite;
+}
+
+.leg2{
+  bottom:20px;
+  left:69px;
+animation: walk2 1.5s infinite;
+}
+
+.leg3{
+  bottom:50px;
+  left:99px;
+  background-color: rgba(191,131,37);
+  z-index: -1;
+animation: walk3 2s infinite;
+}
+
+.leg4{
+  bottom:78px;
+  left:122px;
+  animation: walk4 2.5s infinite;
+}
+
+@keyframes walk1 {
+  50%{
+    transform: rotate(-20deg);
+  }
+}
+@keyframes walk2 {
+  50%{
+    transform: rotate(-20deg);
+  }
+}
+@keyframes walk3 {
+  50%{
+    transform: rotate(-20deg);
+  }
+}
+@keyframes walk4 {
+  50%{
+    transform: rotate(-20deg);
+  }
+}
+
+
+.tail{
+  width:0;
+  height:0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 40px solid #fdb44e;
+  position: relative;
+  bottom: 169px;
+  left: 120px;
+  transform: rotate(30deg);
+  transform-origin: bottom;
+  animation: wag 1s infinite;
+}
+
+@keyframes wag {
+  50%{
+    transform: rotate(10deg);
+  }
+}
+
+.ear{
+  background-color: rgba(151,89,2,0.8);
+  width:25px;
+  height:40px;
+  border-radius: 0px 0px 100px 100px;
+  position: relative;
+  left: 36px;
+  bottom:195px;
+}
+
+.nose{
+  background-color: black;
+  width:8px;
+  height:8px;
+  border-radius: 50%;
+  position: relative;
+  right: 2px;
+  bottom:237px;
+}
+
+.eye{
+  background-color: black;
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  position: relative;
+  left: 22px;
+  bottom:240px;
 }

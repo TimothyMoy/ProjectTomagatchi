@@ -144,18 +144,17 @@ function startAge(){
 //pet
 function generatePets(){
   const newPet = new Pet("dog");
-  $('<div id="dog"></div>').appendTo('#game');
-  document.getElementById('dog').innerText = `This is a ${newPet.type}`;
-  document.getElementById('dog').animate([
+
+  document.getElementById('pet').animate([
     //keyframes
-    { transform: 'translateY(0px)'},
-    { transform: 'translateX(200px)'},
-      { transform: 'translateY(0px)'},
-    { transform: 'translateX(-200px)'},
-      { transform: 'translateY(0px)'},
+    { transform: 'translateX(400px)'},
+    { transform: 'translateX(-400px)'},
+      // { transform: 'translateY(0px)'},
+    // { transform: 'translateX(-400px)'},
+    //   { transform: 'translateY(0px)'},
   ],{
     //timing options
-    duration: 4000,
+    duration: 40000,
     iterations: Infinity
     });
 }
