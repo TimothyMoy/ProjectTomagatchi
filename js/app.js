@@ -66,19 +66,37 @@ $('.characterButton').click(function(){
   setName();
   //TEST
   hungerTimer();
-  sleepTimer();
+
   boredTimer();
+  randomTime();
 })
 
 //Feed button test
 $('#feed').click(function(){
-  $( `.hungerStatus ${hungerIndex}` ).each(function() {
-    if (hungerIndex < 10){
-      let hungerNum = document.getElementById(`hunger${hungerIndex}`)
-        hungerNum.classList.remove('test2');
-        hungerNum.classList.add('test1');
-    }
-  });
+  if (hungerIndex < 10 && hungerIndex > 0){
+    let hungerNum = document.getElementById(`hunger${hungerIndex}`)
+    hungerNum.classList.remove('test2');
+    hungerNum.classList.add('test1');
+    hungerIndex-=1;
+  }
+});
+
+$('#lights').click(function(){
+  if (sleepIndex < 10 && sleepIndex > 0){
+    let sleepNum = document.getElementById(`sleep${sleepIndex}`)
+    sleepNum.classList.remove('test2');
+    sleepNum.classList.add('test1');
+    sleepIndex-=1;
+  }
+});
+
+$('#play').click(function(){
+  if (boredIndex < 10 && boredIndex > 0){
+    let boredNum = document.getElementById(`bored${boredIndex}`)
+    boredNum.classList.remove('test2');
+    boredNum.classList.add('test1');
+    boredIndex-=1;
+  }
 });
 
 
@@ -228,6 +246,15 @@ setInterval(function (){
   }
 },1000)
 }
+
+function randomTime() {
+  let min = 1,
+    max = 2;
+  let rand = Math.floor(Math.random() * (max - min + 1) + min); //Generate Random number between 5 - 10
+  setTimeout(sleepTimer, rand * 1000);
+}
+
+
 
 
 
