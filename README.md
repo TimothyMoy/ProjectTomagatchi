@@ -107,6 +107,7 @@ setInterval(function (){
 2. There should be a lose screen when hunger,sleep, or boredom scale gets to 10.
 3. There should be instructions on how to play the game.
 4. Maybe the buttons would generate an effect to show the dog interacting with a ball or going to sleep when pressed.
+5. Fix rename button to not repeat on click.
 
 * **Image assets created by**
 1. House exterior
@@ -117,4 +118,7 @@ setInterval(function (){
 
 3. Dog
 <a href='https://www.freepik.com/free-photos-vectors/nature'>Nature vector created by stockgiu - www.freepik.com</a>
+<br/>
 Dog animation tutorial https://www.youtube.com/watch?v=gtl2ufc3_-c
+<br/>
+Dog 2 https://www.cgshospital.com/galleryvats-4-cgs-staff

@@ -66,7 +66,6 @@ $('.characterButton').click(function(){
   hungerTimer();
   boredTimer();
   sleepTimer();
-
 })
 
 //Feed button test
@@ -145,7 +144,8 @@ function startAge(){
     //Age less then 10 then counts up
     if (age < 10){
       age++;
-      updateAge()
+      updateAge();
+      evolve();
     } else {
       //ends game
       $('#endCover').css("display","flex")
@@ -156,11 +156,30 @@ function startAge(){
     }
   }, 4000)
 }
-  function updateAge(){
-    //updates UI
-    document.getElementById('age').innerText = `Age ${age}`;
-  }
 
+//updating the age
+function updateAge(){
+  //updates UI
+  document.getElementById('age').innerText = `Age ${age}`;
+}
+
+//evolve functionality.
+function evolve(){
+    if (age === 5) {
+      $('#pet').append('<div class="evoDog"></div>');
+      $('#pet').css("top","175px")
+      $('.dog').remove();
+      $('.body').remove();
+      $('.leg1').remove();
+      $('.leg2').remove();
+      $('.leg3').remove();
+      $('.leg4').remove();
+      $('.tail').remove();
+      $('.ear').remove();
+      $('.nose').remove();
+      $('.eye').remove();
+    }
+}
 
 //pet
 function generatePets(){
