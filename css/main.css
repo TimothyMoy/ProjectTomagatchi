@@ -169,9 +169,9 @@ form {
 
 .endTitle {
   font-family: "Play";
-  padding: 8px;
+  padding: 8px 0px;
   background-color: #FFEFC8;
-  border-radius: 8px;
+  border-radius: 16px 16px 0px 0px;
   border: solid;
   border-bottom-color: #DEC790;
   border-top: none;
