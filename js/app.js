@@ -109,6 +109,10 @@ $('.renameButton').click(function(){
   setNewName();
 });
 
+//endgame
+$('.endButton').click(function(){
+  location.reload();
+});
 //functions
 
 
