@@ -26,7 +26,6 @@ class Pet {
 
 // 2) constants
 let age = 0;
-// let rename = document.getElementById('user-name');
 const statusBar = 10;
 const pets = [];
 const status = document.getElementsByClassName('text');
@@ -155,7 +154,7 @@ function startAge(){
       //clearInterval ends loop
       clearInterval(ages);
     }
-  }, 1000)
+  }, 2000)
 }
   function updateAge(){
     //updates UI
@@ -233,7 +232,7 @@ setInterval(function (){
     } else {
     clearInterval(hungerIndex);
   }
-},4000)
+},3000)
 }
 
 function boredTimer() {
@@ -246,7 +245,7 @@ setInterval(function (){
     } else {
     clearInterval(boredIndex);
   }
-},4000)
+},3000)
 }
 
 function sleepTimer() {
@@ -259,30 +258,5 @@ setInterval(function (){
     } else {
     clearInterval(sleepIndex);
   }
-},4000)
+},3000)
 }
-
-
-function endGame() {
-  if (age === 10) {
-    $('#endCover').css("display","flex")
-
-  }
-}
-
-
-// function generateStats(){
-//   // console.log('this works');
-//   for (let i = 0; i < status.length; i ++){
-//     // console.log(status[i]);
-//     if (status[i].innerText === "Hunger") {
-//       $('.hunger').append($("<ul class='hungerStatus'></ul>"));
-//       //separate cateogry
-//       //take first div and add red by index
-//     } else if (status[i].innerText === "Sleepiness"){
-//         $('.sleepiness').append($("<ul class='sleepStatus'></ul>"));
-//     } else {
-//         $('.boredom').append($("<ul class='boredomStatus'></ul>"));
-//     }
-//   } createScale()
-// }

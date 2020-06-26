@@ -5,7 +5,9 @@
 
 For the first SEI Project, I am building a -**Tomagtochi Game !**
 
-My tomagotchi game is called Pixel Dogs and I made it to test my knowledge in HTML, CSS, and JavaScript.
+My Tomagotchi game is called Pixel Dogs and I made it to test my knowledge in HTML, CSS, and JavaScript.
+
+I chose a default pet to be a dog
 
 
 ---
@@ -53,18 +55,31 @@ My tomagotchi game is called Pixel Dogs and I made it to test my knowledge in HT
     <!-- * play subtracts 1 Boredom scale. -->
 5.  The user's pet ages every 2 minutes
     <!-- * Increase your pet's age every 2 minutes -->
-6.  The pet will age ever 5 years.
+6.  The pet will age every 5 years.
     <!-- * Morph your pet at certain ages. -->
-6.  If the pets age or status's hit 10, the game is over.
+7.  If the pets age or status's hit 10, the game is over.
     <!-- * You lose if your pet should die if Hunger, Boredom, or Sleepiness hits 10. -->
     <!-- * You win if age 10. -->
 
+* **Highlights**
+```javascript
+function test() {
+console.log("look ma’, no spaces"); }
+```
 
+* **Next Steps**
+1. There's a bit of repeating code, I think there should be a way to refractor it to be more clean.
+2. There should be a lose screen when hunger,sleep, or boredom scale gets to 10.
+3. There should be instructions on how to play the game.
+4. Maybe the buttons would generate an effect to show the dog interacting with a ball or going to sleep when pressed.
 
-<!--
-* **Break the project down into different components** (data, presentation, views, style, DOM manipulation) and brainstorm each component individually. Use whiteboards!
-* **Use your Development Tools** (console.log, element inspector, alert statements, etc) to debug and solve problems
-* During the day, work through problems in class & **ask questions when you need to!** We're here to help prevent you from burning through your time with wild goose chases. Add relevant code to your game each night too, instead of, you know... _procrastinating_.
-* **Commit early, commit often.** Don’t be afraid to break something because you can always go back in time to a previous version. There should be _at least_ a couple dozen commits.
-* **Consult documentation resources** (MDN, jQuery, etc.) at home to better understand what you’ll be getting into.
-* **Plan to write code that you know you will have to remove later.** Create temporary elements (buttons, links, etc) that trigger events if real data is not available. For example, if you’re trying to figure out how to change some text when the game is over but you haven’t solved the win/lose game logic, you can create a button to simulate that until then.
+* **Image assets created by**
+House exterior
+<a href='https://www.freepik.com/free-photos-vectors/house'>House vector created by vectorpouch - www.freepik.com</a>
+
+House interior
+<a href='https://www.freepik.com/free-photos-vectors/design'>Design vector created by freepik - www.freepik.com</a>
+
+Dog
+<a href='https://www.freepik.com/free-photos-vectors/nature'>Nature vector created by stockgiu - www.freepik.com</a>
+https://www.youtube.com/watch?v=gtl2ufc3_-c
