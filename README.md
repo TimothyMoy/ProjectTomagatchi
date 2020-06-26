@@ -18,8 +18,6 @@ I chose a default pet to be a dog
 ![CharacterEdit](/Images/Wireframe_TomagotchiCharacterEdit.png)
 ![Game](/Images/Wireframe_TomagotchiGame.png)
 ![GameWin](/Images/Wireframe_TomagotchiGameWin.png)
-![GameLose](/Images/Wireframe_TomagotchiGameLose.png)
-
 
 * **User Stories**
 1.  The user begins the game by click/tapping start
