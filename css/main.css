@@ -89,11 +89,11 @@ z-index: 2;
   border-right: none;
 }
 
-/*----Game modal---- */
+/*----Game start---- */
 .characterModal {
-background-color: var(--wBackground);
-background-image: url('../Images/selectscreen.jpg');
-background-size: cover;
+background-color: #dbc5a6;
+/* background-image: url('../Images/selectscreen.jpg');
+background-size: cover; */
 top: 0;
 height: 100%;
 width: 100%;
@@ -161,13 +161,14 @@ z-index: 1;
 
 }
 /*----Game modal---- */
-#cover{
+#endCover{
 background-color: rgba(0, 0, 0, 0.5);
 height: 100%;
 width: 100%;
 position:absolute;
 top: 0;
 display: none;
+z-index: 1;
 }
 
 #endGame {
@@ -181,7 +182,61 @@ position: absolute;
 text-align: center;
 font-size: 1.6em;
 flex-direction: column;
+z-index: 2;
+}
+
+#renameCover{
+background-color: rgba(0, 0, 0, 0.5);
+height: 100%;
+width: 100%;
+position:absolute;
+top: 0;
+display: none;
 z-index: 1;
+}
+
+.renamelabel{
+  font-family: "Play";
+  padding: 0px 24px 0px 24px;
+  margin: 10px;
+  background-color: #FFEFC8;
+  border-radius: 8px;
+  border: solid;
+  border-bottom-color: #DEC790;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.renameButton {
+  font-family: "Play";
+  font-size: .8em;
+  background-color: var(--mainButtonColor);
+  color:#ffffff;
+  width: 160px;
+  height: 40px;
+  border-radius: 8px;
+  border-bottom-color: var(--mainButtonBorder);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+#renameMenu{
+background-color: #dbc5a6;
+border-radius: 16px;
+border: solid #E5995F 2px;
+top: 12%;
+left: 10%;
+height: 80%;
+width: 80%;
+position: absolute;
+align-items: center;
+justify-content: space-around;
+display: flex;
+text-align: center;
+flex-direction: column;
+z-index: 2;
 }
 
 
@@ -192,6 +247,7 @@ z-index: 1;
   max-height: 50px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 #user-icon {
@@ -214,7 +270,8 @@ z-index: 1;
 }
 
 #rename {
-
+font-size: 28px;
+color: var(--mainButtonColor);
 }
 
 #age {
@@ -328,7 +385,7 @@ padding-right: 8px;
   margin: 1px;
 }
 .test2 {
-  background-color: red;
+  background-color: #9F8AED;
   height: 10px;
   width: 10px;
   margin: 1px;

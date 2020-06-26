@@ -64,11 +64,10 @@ $('.characterButton').click(function(){
   generateBored();
   //setName
   setName();
-  //TEST
+  //status time
   hungerTimer();
-
   boredTimer();
-  randomTime();
+  randomSleepTime();
 })
 
 //Feed button test
@@ -99,9 +98,16 @@ $('#play').click(function(){
   }
 });
 
+//rename
+$('#rename').click(function(){
+  $('#renameCover').css("display","block");
+  renameForm();
+});
 
-
-
+$('.renameButton').click(function(){
+  $('#renameCover').css("display","none");
+  setNewName();
+});
 
 //functions
 
@@ -109,9 +115,17 @@ $('#play').click(function(){
 function createForm() {
 $('<form><label>Name: </label><input type="text" id="form" value="tomagotchi"></form>').insertAfter($('.pet'));
 }
+
+function renameForm() {
+$('<form><label>Name: </label><input type="text" id="renameform"></form>').insertAfter($('.renamelabel'));
+}
+
 //setName
 function setName(){
   document.getElementById('user-name').innerText = document.getElementById('form').value;
+}
+function setNewName(){
+  document.getElementById('user-name').innerText = document.getElementById('renameform').value;
 }
 
 //rename
@@ -133,7 +147,7 @@ function startAge(){
       // $('#endGame').append('<p>')
       clearInterval(ages);
     }
-  }, 1000)
+  }, 10000)
 }
   function updateAge(){
     //updates UI
@@ -243,7 +257,7 @@ setInterval(function (){
 },1000)
 }
 
-function randomTime() {
+function randomSleepTime() {
   let min = 1,
     max = 2;
   let rand = Math.floor(Math.random() * (max - min + 1) + min); //Generate Random number between 5 - 10
