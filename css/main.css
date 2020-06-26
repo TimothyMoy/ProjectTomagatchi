@@ -51,21 +51,21 @@ form {
 
 /*----Game Start---- */
 .startScreen {
-background-color: var(--wBackground);
-background-image: url('../Images/gamebackground.jpg');
-background-size: cover;
-background-position-y: center;
-top: 0;
-height: 100%;
-width: 100%;
-position: absolute;
-justify-content: center;
-align-items: center;
-text-align: center;
-font-size: 1.6em;
-display: flex;
-flex-direction: column;
-z-index: 2;
+  background-color: var(--wBackground);
+  background-image: url('../Images/gamebackground.jpg');
+  background-size: cover;
+  background-position-y: center;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.6em;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
 }
 
 .Title {
@@ -91,20 +91,18 @@ z-index: 2;
 
 /*----Game start---- */
 .characterModal {
-background-color: #dbc5a6;
-/* background-image: url('../Images/selectscreen.jpg');
-background-size: cover; */
-top: 0;
-height: 100%;
-width: 100%;
-position: absolute;
-text-align: center;
-justify-content: center;
-align-items: center;
-font-size: 1.2em;
-display: flex;
-flex-direction: column;
-z-index: 1;
+  background-color: #dbc5a6;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
 }
 
 .pet {
@@ -157,42 +155,82 @@ z-index: 1;
   border-right: none;
 }
 
-#form{
 
-}
 /*----Game modal---- */
 #endCover{
-background-color: rgba(0, 0, 0, 0.5);
-height: 100%;
-width: 100%;
-position:absolute;
-top: 0;
-display: none;
-z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  position:absolute;
+  top: 0;
+  display: none;
+  z-index: 1;
+}
+
+.endTitle {
+  font-family: "Play";
+  padding: 8px;
+  background-color: #FFEFC8;
+  border-radius: 8px;
+  border: solid;
+  border-bottom-color: #DEC790;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 100%;
+}
+
+.endText {
+  background-color: #ffffff;
+  width: 80%;
+  height: 60%;
+  margin: 8px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+}
+
+.endButton{
+  font-family: "Play";
+  font-size: .8em;
+  background-color: var(--mainButtonColor);
+  color:#ffffff;
+  width: 160px;
+  height: 40px;
+  border-radius: 8px;
+  border-bottom-color: var(--mainButtonBorder);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  align-self: center;
 }
 
 #endGame {
-background-color: #888888;
-border-radius: 16px;
-top: 12%;
-left: 10%;
-height: 80%;
-width: 80%;
-position: absolute;
-text-align: center;
-font-size: 1.6em;
-flex-direction: column;
-z-index: 2;
+  background-color: #dbc5a6;
+  border: solid #E5995F 2px;
+  border-radius: 16px;
+  top: 12%;
+  left: 10%;
+  height: 80%;
+  width: 80%;
+  position: absolute;
+  text-align: center;
+  font-size: 1.2em;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
 }
 
 #renameCover{
-background-color: rgba(0, 0, 0, 0.5);
-height: 100%;
-width: 100%;
-position:absolute;
-top: 0;
-display: none;
-z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  position:absolute;
+  top: 0;
+  display: none;
+  z-index: 1;
 }
 
 .renamelabel{
@@ -223,20 +261,20 @@ z-index: 1;
 }
 
 #renameMenu{
-background-color: #dbc5a6;
-border-radius: 16px;
-border: solid #E5995F 2px;
-top: 12%;
-left: 10%;
-height: 80%;
-width: 80%;
-position: absolute;
-align-items: center;
-justify-content: space-around;
-display: flex;
-text-align: center;
-flex-direction: column;
-z-index: 2;
+  background-color: #dbc5a6;
+  border-radius: 16px;
+  border: solid #E5995F 2px;
+  top: 12%;
+  left: 10%;
+  height: 80%;
+  width: 80%;
+  position: absolute;
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  z-index: 2;
 }
 
 
@@ -270,15 +308,15 @@ z-index: 2;
 }
 
 #rename {
-font-size: 28px;
-color: var(--mainButtonColor);
+  font-size: 28px;
+  color: var(--mainButtonColor);
 }
 
 #age {
-flex-grow: 12;
-line-height: 3;
-text-align: right;
-padding-right: 8px;
+  flex-grow: 12;
+  line-height: 3;
+  text-align: right;
+  padding-right: 8px;
 }
 
 #secondarynav {
@@ -378,13 +416,13 @@ padding-right: 8px;
   border-right: none;
 }
 
-.test1 {
+.statusOff {
   background-color: var(--xBackground);
   height: 10px;
   width: 10px;
   margin: 1px;
 }
-.test2 {
+.statusOn {
   background-color: #9F8AED;
   height: 10px;
   width: 10px;
@@ -394,8 +432,8 @@ padding-right: 8px;
 /*----Game Characters---- */
 
 #pet{
-position: absolute;
-top: 200px;
+  position: absolute;
+  top: 200px;
 }
 
 .dog{

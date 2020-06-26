@@ -58,7 +58,6 @@ $('.characterButton').click(function(){
   //creates pets
   generatePets();
   //creates stat bar
-  // generateStats();
   generateHunger();
   generateSleep();
   generateBored();
@@ -67,15 +66,16 @@ $('.characterButton').click(function(){
   //status time
   hungerTimer();
   boredTimer();
-  randomSleepTime();
+  sleepTimer();
+
 })
 
 //Feed button test
 $('#feed').click(function(){
   if (hungerIndex < 10 && hungerIndex > 0){
     let hungerNum = document.getElementById(`hunger${hungerIndex}`)
-    hungerNum.classList.remove('test2');
-    hungerNum.classList.add('test1');
+    hungerNum.classList.remove('statusOn');
+    hungerNum.classList.add('statusOff');
     hungerIndex-=1;
   }
 });
@@ -83,8 +83,8 @@ $('#feed').click(function(){
 $('#lights').click(function(){
   if (sleepIndex < 10 && sleepIndex > 0){
     let sleepNum = document.getElementById(`sleep${sleepIndex}`)
-    sleepNum.classList.remove('test2');
-    sleepNum.classList.add('test1');
+    sleepNum.classList.remove('statusOn');
+    sleepNum.classList.add('statusOff');
     sleepIndex-=1;
   }
 });
@@ -92,8 +92,8 @@ $('#lights').click(function(){
 $('#play').click(function(){
   if (boredIndex < 10 && boredIndex > 0){
     let boredNum = document.getElementById(`bored${boredIndex}`)
-    boredNum.classList.remove('test2');
-    boredNum.classList.add('test1');
+    boredNum.classList.remove('statusOn');
+    boredNum.classList.add('statusOff');
     boredIndex-=1;
   }
 });
@@ -111,11 +111,15 @@ $('.renameButton').click(function(){
 
 //functions
 
+
+
+
 //name change on start
 function createForm() {
 $('<form><label>Name: </label><input type="text" id="form" value="tomagotchi"></form>').insertAfter($('.pet'));
 }
 
+//rename form
 function renameForm() {
 $('<form><label>Name: </label><input type="text" id="renameform"></form>').insertAfter($('.renamelabel'));
 }
@@ -124,14 +128,13 @@ $('<form><label>Name: </label><input type="text" id="renameform"></form>').inser
 function setName(){
   document.getElementById('user-name').innerText = document.getElementById('form').value;
 }
+
+//setNewName
 function setNewName(){
   document.getElementById('user-name').innerText = document.getElementById('renameform').value;
 }
 
-//rename
-// function reName(){
-//   document.getElementById('user-name').innerText = document.getElementById('form').value;
-// }
+
 
 //Starts Age
 function startAge(){
@@ -141,13 +144,14 @@ function startAge(){
       age++;
       updateAge()
     } else {
-      //need to create event to end game.
+      //ends game
+      $('#endCover').css("display","flex")
+      let names = document.getElementById('user-name').innerText
+      $('.endText').append($(`<p>Congrats! ${names} is 10 years old. it's time for ${names} to go to Heaven.</p>`))
       //clearInterval ends loop
-      // $('#endGame').css("display","flex")
-      // $('#endGame').append('<p>')
       clearInterval(ages);
     }
-  }, 10000)
+  }, 1000)
 }
   function updateAge(){
     //updates UI
@@ -163,9 +167,6 @@ function generatePets(){
     //keyframes
     { transform: 'translateX(400px)'},
     { transform: 'translateX(-400px)'},
-      // { transform: 'translateY(0px)'},
-    // { transform: 'translateX(-400px)'},
-    //   { transform: 'translateY(0px)'},
   ],{
     //timing options
     duration: 40000,
@@ -195,7 +196,7 @@ function createHungerScale(){
   for (let a = 0; a < statArr.length; a++) {
       statArr[a] = document.createElement('div');
       statArr[a].id = "hunger" + a;
-      statArr[a].classList.add("test1");
+      statArr[a].classList.add("statusOff");
       $(".hungerStatus").append(statArr[a]);
   }
 }
@@ -204,7 +205,7 @@ function createSleepScale(){
   for (let b = 0; b < statArr.length; b++) {
       statArr[b] = document.createElement('div');
       statArr[b].id = "sleep" + b;
-      statArr[b].classList.add("test1");
+      statArr[b].classList.add("statusOff");
       $(".sleepStatus").append(statArr[b]);
   }
 }
@@ -213,7 +214,7 @@ function createBoredScale(){
   for (let c = 0; c < statArr.length; c++) {
       statArr[c] = document.createElement('div');
       statArr[c].id = "bored" + c;
-      statArr[c].classList.add("test1");
+      statArr[c].classList.add("statusOff");
       $(".boredomStatus").append(statArr[c]);
   }
 }
@@ -222,50 +223,48 @@ function hungerTimer() {
 setInterval(function (){
   if (hungerIndex < 10){
     let hungerNum = document.getElementById(`hunger${hungerIndex}`)
-      hungerNum.classList.remove('test1');
-      hungerNum.classList.add('test2');
+      hungerNum.classList.remove('statusOff');
+      hungerNum.classList.add('statusOn');
       hungerIndex+=1;
     } else {
     clearInterval(hungerIndex);
   }
-},1000)
+},4000)
 }
 
 function boredTimer() {
 setInterval(function (){
   if (boredIndex < 10){
     let boredNum = document.getElementById(`bored${boredIndex}`)
-      boredNum.classList.remove('test1');
-      boredNum.classList.add('test2');
+      boredNum.classList.remove('statusOff');
+      boredNum.classList.add('statusOn');
       boredIndex+=1;
     } else {
     clearInterval(boredIndex);
   }
-},1000)
+},4000)
 }
 
 function sleepTimer() {
 setInterval(function (){
   if (sleepIndex < 10){
     let sleepNum = document.getElementById(`sleep${sleepIndex}`)
-      sleepNum.classList.remove('test1');
-      sleepNum.classList.add('test2');
+      sleepNum.classList.remove('statusOff');
+      sleepNum.classList.add('statusOn');
       sleepIndex+=1;
     } else {
     clearInterval(sleepIndex);
   }
-},1000)
-}
-
-function randomSleepTime() {
-  let min = 1,
-    max = 2;
-  let rand = Math.floor(Math.random() * (max - min + 1) + min); //Generate Random number between 5 - 10
-  setTimeout(sleepTimer, rand * 1000);
+},4000)
 }
 
 
+function endGame() {
+  if (age === 10) {
+    $('#endCover').css("display","flex")
 
+  }
+}
 
 
 // function generateStats(){
