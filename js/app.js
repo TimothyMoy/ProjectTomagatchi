@@ -154,7 +154,7 @@ function startAge(){
       //clearInterval ends loop
       clearInterval(ages);
     }
-  }, 2000)
+  }, 4000)
 }
   function updateAge(){
     //updates UI
