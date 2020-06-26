@@ -62,9 +62,46 @@ I chose a default pet to be a dog
     <!-- * You win if age 10. -->
 
 * **Highlights**
+1. click buttons
 ```javascript
-function test() {
-console.log("look ma’, no spaces"); }
+$('#feed').click(function(){
+  if (hungerIndex < 10 && hungerIndex > 0){
+    let hungerNum = document.getElementById(`hunger${hungerIndex}`)
+    hungerNum.classList.remove('statusOn');
+    hungerNum.classList.add('statusOff');
+    hungerIndex-=1;
+  }
+});
+```
+
+2. status animation
+```javascript
+const statArr = [0,1,2,3,4,5,6,7,8,9]
+function createHungerScale(){
+  for (let a = 0; a < statArr.length; a++) {
+      statArr[a] = document.createElement('div');
+      statArr[a].id = "hunger" + a;
+      statArr[a].classList.add("statusOff");
+      $(".hungerStatus").append(statArr[a]);
+  }
+}
+```
+
+3. status animation
+```javascript
+let hungerIndex = 0
+function hungerTimer() {
+setInterval(function (){
+  if (hungerIndex < 10){
+    let hungerNum = document.getElementById(`hunger${hungerIndex}`)
+      hungerNum.classList.remove('statusOff');
+      hungerNum.classList.add('statusOn');
+      hungerIndex+=1;
+    } else {
+    clearInterval(hungerIndex);
+  }
+},3000)
+}
 ```
 
 * **Next Steps**
@@ -74,12 +111,12 @@ console.log("look ma’, no spaces"); }
 4. Maybe the buttons would generate an effect to show the dog interacting with a ball or going to sleep when pressed.
 
 * **Image assets created by**
-House exterior
+1. House exterior
 <a href='https://www.freepik.com/free-photos-vectors/house'>House vector created by vectorpouch - www.freepik.com</a>
 
-House interior
+2. House interior
 <a href='https://www.freepik.com/free-photos-vectors/design'>Design vector created by freepik - www.freepik.com</a>
 
-Dog
+3. Dog
 <a href='https://www.freepik.com/free-photos-vectors/nature'>Nature vector created by stockgiu - www.freepik.com</a>
-https://www.youtube.com/watch?v=gtl2ufc3_-c
+Dog animation tutorial https://www.youtube.com/watch?v=gtl2ufc3_-c
